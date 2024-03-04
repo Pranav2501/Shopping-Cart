@@ -68,7 +68,8 @@ npm install --save firebase
 The project is currently hosted using Firebase, kindly use this link: https://shopping-cart-b6bac.web.app
 
 ### Video Demo
-
+Link to video - https://northeastern.zoom.us/rec/share/3iniR7-2MyC5IzcYPbpJBk0A9xqLAH218qfkvCh8Ex9_jwfztw4uXvhDb7IFaSww.ecP_YDfAedLuasFR?startTime=1709538654000
+Passcode: 1Fm%Y^KU
 ### LICENSE
 
 The project is licensed user MIT and is publicly available to all for use.
