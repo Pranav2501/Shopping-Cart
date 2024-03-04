@@ -1,4 +1,3 @@
-// src/Table.jsx
 import React, { useState } from 'react';
 import Products from './Products';
 
@@ -7,28 +6,32 @@ import Navbar from '../templates/Navbar';
 import Footer from '../templates/Footer';
 import '../components/Table.css';
 
+// display products and add, delete, update products
 function Table() {
     const { products, addProduct, deleteProduct, updateProduct } = Products();
     const [newProduct, setNewProduct] = useState({ name: '', price: '', image: '' });
 
+    // update product in state
     const handleInputChange = (event) => {
         setNewProduct({ ...newProduct, [event.target.name]: event.target.value });
     };
-
+    // add product to firebase
     const handleAddProduct = () => {
         addProduct(newProduct);
         setNewProduct({ name: '', price: '', image: '' });
     };
 
+    // update product in state
     const handleUpdateProduct = (product) => {
         setNewProduct(product);
     };
-
+    // update product in firebase
     const handleSaveUpdate = () => {
         updateProduct(newProduct);
         setNewProduct({ name: '', price: '', image: '' });
     };
 
+    // display products in a table in Table component
     return (
         <div>
         <Header />

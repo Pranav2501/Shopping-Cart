@@ -1,5 +1,4 @@
-/* Table.css */
 .scrollable-table {
-    height: 300px; /* Adjust this value as needed */
+    height: 300px; 
     overflow-y: auto;
 }

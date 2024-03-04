@@ -1,4 +1,3 @@
-// src/Card.jsx
 import Header from '../templates/Header.jsx';
 import Navbar from '../templates/Navbar.jsx';
 import Footer from '../templates/Footer.jsx';
@@ -9,12 +8,13 @@ import Products from './Products';
 import CartTable from './CartTable';
 import { db } from '../Firebase/firebase.js'; 
 
+//display products and add to cart
 function Card() {
     const { products } = Products();
     const [cart, setCart] = useState({});
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 10; 
-
+    // firebase functions
     const addToCartFirebase = async (id, price) => {
         const q = query(collection(db, "cart"), where("id", "==", id));
         const querySnapshot = await getDocs(q);
@@ -30,7 +30,7 @@ function Card() {
             });
         }
     };
-
+    //firebase functions
     const removeFromCartFirebase = async (id) => {
         const q = query(collection(db, "cart"), where("id", "==", id));
         const querySnapshot = await getDocs(q);
@@ -44,12 +44,12 @@ function Card() {
             }
         }
     };
-
+    //add to cart
     const addToCart = (id, price) => {
         setCart(prevCart => ({ ...prevCart, [id]: (prevCart[id] || 0) + 1 }));
         addToCartFirebase(id, price);
     };
-
+    //remove from cart
     const removeFromCart = (id) => {
         setCart(prevCart => {
             const newCart = { ...prevCart };
@@ -62,20 +62,20 @@ function Card() {
         });
         removeFromCartFirebase(id);
     };
-
+    //function to calculate total
     const calculateTotal = () => {
         return Object.entries(cart).reduce((total, [id, quantity]) => {
             const product = products.find(product => product.id === id);
             return total + product.price * quantity;
         }, 0);
     };
-
+    //function to change page
     const changePage = (newPage) => {
         setCurrentPage(newPage);
     };
-
+    //function to paginate products
     const paginatedProducts = products.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
-
+    //returning the products
     return (
         <div>
         <Header />

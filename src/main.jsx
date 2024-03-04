@@ -6,6 +6,7 @@ import Table from "./components/Table";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+// router
 const router = createBrowserRouter([
   {
     path: "/",

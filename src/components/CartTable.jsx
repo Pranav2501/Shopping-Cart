@@ -1,6 +1,7 @@
-// src/CartTable.jsx
 import React from 'react';
 
+//display cart items
+// render the cart items in a table
 function CartTable({ cart, products }) {
     return (
         <table>
