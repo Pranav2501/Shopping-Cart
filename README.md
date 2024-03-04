@@ -1,15 +1,36 @@
-# NexusNet
-Welcome to NexusNet, a social media platform designed for your preferences. This application allows users to create an account, post content & interact with other users through comments and likes. The project is built using the React-Vite Framework and JS Classes, no hooks are implemented in this code. Firebase was used to serve as the backend and provide functionalities for hosting the server. The platform also allows users to customize their profile sections with pictures & bio, along with an option to find the details of other users by typing their name.
+# Shopping Cart
+This is a simple shopping cart application, that allows users to add/remove products to the cart, create, update, delete products from the total list of available products.
+The application makes use of Firestore database to store a list of collections which are:
+
+- Products (Database Collection)
+ The list of available products with the attributes (ID, Name, Price, Image).
+Functionalities:
+- Users can create a new product with the attributes (Name, Price, Image)
+- Users can update an existing product whose attributes are (Name, Price & Image)
+- Users can also delete a product from the database
+
+All these functionalities are implemented using Firestore Database in live-time. The elements are stored in a collection called "products" which are then rendered in the Table Component which can be accessed via the NavBar.
+The user operations are all reflected in the database.
+
+- Cart (Database Collection)
+This is for storing the items in the cart and has the following attributes (Name, Price, Qty, Total Price)
+Functionalities:
+- The users can add a particular product to the cart
+- The users can increment/decrement the qty of the products
+- Pagination has been implemented to render 10 products per page, (The Database has 25 items to which the user can add more if need be). The choice for 10 per page was done to show the working of the pagination, since we have four buttons (First Page, Next Page, Previous Page, Last Page).
+- The total price of the items are calculated & displayed, followed by a table which has the list of items added to the cart along with their price & qty.
+
+
+These functionalities are also implemented using the Firestore Database and are dynamically changed. If the qty of the products or if the products are removed from the cart. The changes are reflected in the database collection "cart".
+
+These are the following tools used for this project:
 
 Framework - React-Vite
-CSS - Boostrap & custom sytling
+CSS - Custom sytling
 Backend - Firestore Database
 Hosting - Firebase Hosting
 
-## GitHub Repository
-The current repository was reinitialized from the project folder by removing the .git directory, since the old submission had merge conflicts which could not be resolved. This new Repository has a few changes made to Firebase files which could not be merged, so the entire repo was wiped before pushing the code again. Here's the screenshot of the old repository before it was wiped.
-
-![GitHub Repo Old](./src/images/GitHubSS.png)
+The app uses Functional programming & hooks such as useState & useEffect to capture the current state and changes made, which are then implemented in the Database.
 
 
 ## Getting Started
@@ -52,26 +73,10 @@ Passcode: B!KD8bZU
 ### LICENSE
 
 The project is licensed user MIT and is publicly available to all for use.
-### Functionalities Implemented
-- Create Users
-- Update User Profile (Bio & Profile Pic)
-- Search for Other Users
-- Post Content with Title & Description
-- View Available Posts
-- Add Likes
-- Add Comments
-### Functionalities Missing
-- ML Algorithm for custom-tailoring
-- Discussion Channels
-- Firebase Authentication 
 
 ### Acknowledgments 
-- Sources Used (YouTube) - https://www.youtube.com/watch?v=FweHcYHkt9A&t=5573s
-- GitHub Co-Pilot for fixing errors & debugging
 - CS 5010 Programming Design Paradigms Course by Dr. John Alexis Guerra Gomez (Professor) & Mr. Ali Saremi (TA)
 
-### Notes
-This was a challenging project to do with just JS classes, since its a social media platform that needs to keep track of the available posts, likes, comments & users. The firestore database helped in storing information and has been implemented along with the React Classes. Modularity is ensured by having separate components for Rendering. The code submitted on GitHub had a few changes, but there were some merge-conflicts, hence the .git directory was erased and the updated version was uploaded.
 ### Snapshots
 Create User Page
 ![CreateUser](./src/images/LoginPage.png)
