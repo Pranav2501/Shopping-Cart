@@ -25,10 +25,10 @@ These functionalities are also implemented using the Firestore Database and are 
 
 These are the following tools used for this project:
 
-Framework - React-Vite
-CSS - Custom sytling
-Backend - Firestore Database
-Hosting - Firebase Hosting
+- Framework - React-Vite
+- CSS - Custom sytling
+- Backend - Firestore Database
+- Hosting - Firebase Hosting
 
 The app uses Functional programming & hooks such as useState & useEffect to capture the current state and changes made, which are then implemented in the Database.
 
@@ -65,11 +65,10 @@ npm run dev
 npm install --save firebase
 ```
 ### Hosting
-The project is currently hosted using Firebase, kindly use this link: https://nexusnet-63734.web.app
+The project is currently hosted using Firebase, kindly use this link: https://shopping-cart-b6bac.web.app
 
 ### Video Demo
-Link - https://northeastern.zoom.us/rec/share/cOVEJPE01xjjAkOR0sBZdjtw1oqvWtQhrO3cr_VDYTmrUxDIXc4ZuTW-w5baKPyb.TkfIz3Uq19wb7b_K?startTime=1709348812000
-Passcode: B!KD8bZU
+
 ### LICENSE
 
 The project is licensed user MIT and is publicly available to all for use.
@@ -78,14 +77,14 @@ The project is licensed user MIT and is publicly available to all for use.
 - CS 5010 Programming Design Paradigms Course by Dr. John Alexis Guerra Gomez (Professor) & Mr. Ali Saremi (TA)
 
 ### Snapshots
-Create User Page
-![CreateUser](./src/images/LoginPage.png)
-Successful User Creation Page
-![SuccessPage](./src/images/SuccessfulLogin.png)
 Home Page
-![Home Page](./src/images/HomePage.png)
-Profile Page
-![Profile Page](./src/images/ProfilePage.png)
-Search User Page
-![Search Page](./src/images/SearchUserPage.png)
+![Homepage](./src/images/Homepage.png)
+List of Products with CRUD Operations
+![Table](./src/images/Table.png)
+Adding products to Cart (Add, Remove from Cart)
+![Products1](./src/images/Products1.png)
+Product Page with Pagination (10 per page)
+![Products2](./src/images/Products2.png)
+Firestore Database with Collections
+![Database](./src/images/Database.png)
 
